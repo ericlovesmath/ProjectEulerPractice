@@ -31,5 +31,16 @@ tri_num = [[int(num) for num in row.split()] for row in triangle.split("\n")]
 def sum_n_dig(num, n):
     return sum(int(num[i]) for i in range(n))
 
-for i in range(32768):
-    sum(sum_n_dig("{0:b}".format(i), j) for j in range())
+total_sums = set()
+for i in range(16384):
+    total_sum = 75
+    side_index = 0
+    for j in range(14):
+        side_index += int("{0:014b}".format(i)[j])
+        total_sum += tri_num[j+1][side_index]
+    total_sums.add(total_sum)
+
+print(max(total_sums))
+
+
+# "{0:b}".format(i)
