@@ -33,3 +33,4 @@ def list_prod(prod_list):
 
 largest_row_product = max([list_prod([int(num[i+x]) for x in range(13)]) for i in range(988)])
 print(largest_row_product)
+
