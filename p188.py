@@ -1,3 +1,5 @@
+# Get the last 8 digits of 1777 (tetration) 1855
+
 # Identify Size of Cycle
 
 i = 1
