@@ -1,1 +1,1 @@
-let () = Printf.printf "%d" P026.ans
+let () = Printf.printf "%d" P042.ans
