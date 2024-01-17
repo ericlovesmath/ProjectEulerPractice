@@ -1,0 +1,14 @@
+# Solution 1
++/⍸∨⌿0=3 5∘.|⍳999
+             ⍳999  # 0..999
+       3 5∘.|      # Create 2 Arrays mod 3 and mod 5
+   ∨⌿0=            # Binary Mask: Either array has a 0 at that index
+  ⍸                # Filter binary mask on to 0..999 
++/                 # Sum
+
+# Solution 2
++/∪(3×⍳333),5×⍳199
+            5×⍳199  # Multiples of 5 from 0 to 999
+    3×⍳333,         # Concat multiples of 3 from 0 to 999
+  ∪                 # Filter unique
++/                  # Sum
