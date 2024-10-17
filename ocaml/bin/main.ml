@@ -6,7 +6,12 @@ let run_problem n =
   | Some run -> Printf.printf "Problem %d: %d\n" n (run ())
   | None -> Printf.printf "Failed to find problem %d" n
 
-let () = run_problem 1
-
-(* type t = type_def [@@deriving sexp]  *)
-(* let () = print_s ([%sexp_of: t] val_of_type_t) *)
+let () =
+  let number = ref None in
+  Arg.parse
+    []
+    (fun n -> number := int_of_string_opt n)
+    "Usage: dune exec euler -- -n <problem>";
+  match !number with
+  | None -> print_string "No problem provided"
+  | Some n -> run_problem n
