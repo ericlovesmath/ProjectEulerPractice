@@ -15,5 +15,3 @@ let cycle_len n =
   if n mod 2 = 0 || n mod 5 = 0 then 0 else cycle_len' 10 1
 
 let run () = List.max_by ~init:0 ~f:cycle_len ~gt:( > ) (List.range 2 1000)
-
-include (val Solution.make run)

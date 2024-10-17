@@ -12,5 +12,3 @@ let run () =
   |> List.concat_map (fun n -> List.init (n + 1) (choose n))
   |> List.filter (Z.leq (Z.of_int 1_000_000))
   |> List.length
-
-include (val Solution.make run)

@@ -12,5 +12,3 @@ let run () =
   List.range 3 10_000_000
   |> List.filter ~f:(fun n -> n = factorial_sum n)
   |> List.fold ~init:0 ~f:( + )
-
-include (val Solution.make run)

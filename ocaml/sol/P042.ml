@@ -26,5 +26,3 @@ let triangles =
 
 let run () =
   List.length @@ List.filter ~f:(List.mem triangles ~equal:( = )) scores
-
-include (val Solution.make run)

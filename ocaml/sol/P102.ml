@@ -21,5 +21,3 @@ let origin_in_triangle (p1, p2, p3) =
   (s1 && s2 && s3) || ((not s1) && (not s2) && not s3)
 
 let run () = data |> List.filter ~f:origin_in_triangle |> List.length
-
-include (val Solution.make run)

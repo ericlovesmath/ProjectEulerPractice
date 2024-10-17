@@ -18,5 +18,3 @@ let run () =
   |> List.map digit_sum
   |> max
   |> Z.to_int
-
-include (val Solution.make run)

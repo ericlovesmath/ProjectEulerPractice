@@ -8,5 +8,3 @@ let run () =
     else fibto' b (a + b) (steps + one)
   in
   to_int (fibto' one one one)
-
-include (val Solution.make run)

@@ -7,5 +7,3 @@ let run () =
   |> List.map ~f:(fun (a, b) -> pow (of_int a) b)
   |> List.fold ~init:ZSet.empty ~f:(fun acc x -> Set.add acc x)
   |> Set.length
-
-include (val Solution.make run)

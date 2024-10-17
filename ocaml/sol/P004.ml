@@ -10,5 +10,3 @@ let run () =
   |> List.filter ~f:is_palindrome
   |> List.sort ~compare:(fun x y -> y - x)
   |> List.hd_exn
-
-include (val Solution.make run)

@@ -13,5 +13,3 @@ let coins target =
   ways.(target)
 
 let run () = coins 200
-
-include (val Solution.make run)

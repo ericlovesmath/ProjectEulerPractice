@@ -15,5 +15,3 @@ let lychrel n =
   lychrel' n 50
 
 let run () = List.init 10_000 Fun.id |> List.filter lychrel |> List.length
-
-include (val Solution.make run)

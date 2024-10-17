@@ -16,5 +16,3 @@ let run () =
   List.range 2 1_000_000
   |> List.filter ~f:(fun x -> x = sum_digits_pow_5 x)
   |> List.fold ~init:0 ~f:( + )
-
-include (val Solution.make run)
