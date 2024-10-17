@@ -1,0 +1,6 @@
+(executable
+ (public_name euler)
+ (name main)
+ (libraries core zarith euler_solutions)
+ (preprocess (pps ppx_jane))
+)

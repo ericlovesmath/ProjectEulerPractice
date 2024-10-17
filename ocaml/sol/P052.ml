@@ -18,4 +18,6 @@ let is_valid n =
   let test_nums = List.init 6 (fun i -> n * (i + 1)) in
   all_equal (List.map digits test_nums)
 
-let ans = List.find is_valid (List.init 1000000 (( + ) 1))
+let run () = List.find is_valid (List.init 1000000 (( + ) 1))
+
+include (val Solution.make run)

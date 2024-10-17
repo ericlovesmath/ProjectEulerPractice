@@ -12,4 +12,6 @@ let coins target =
   done;
   ways.(target)
 
-let ans = coins 200
+let run () = coins 200
+
+include (val Solution.make run)

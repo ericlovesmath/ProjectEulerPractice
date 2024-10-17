@@ -7,8 +7,10 @@ let factorial =
 
 let choose n r = Z.div (factorial n) (Z.mul (factorial r) (factorial (n - r)))
 
-let ans =
+let run () =
   List.init 100 (( + ) 1)
   |> List.concat_map (fun n -> List.init (n + 1) (choose n))
   |> List.filter (Z.leq (Z.of_int 1_000_000))
   |> List.length
+
+include (val Solution.make run)

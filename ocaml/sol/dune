@@ -1,6 +1,15 @@
-(executable
- (public_name project_euler)
- (name main)
+(library
+ (name euler_solutions)
  (libraries core zarith)
  (preprocess (pps ppx_jane))
 )
+
+(rule
+ (target solutions.ml)
+ (deps
+  (:script ./build_sols.sh)
+  (glob_files P*.ml))
+ (action
+  (with-stdout-to
+   %{target}
+   (run %{script}))))

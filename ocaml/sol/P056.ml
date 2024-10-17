@@ -12,9 +12,11 @@ let digit_sum n =
   in
   digit_sum' zero n
 
-let ans =
+let run () =
   List.init 100 Z.of_int
   |> List.concat_map (fun a -> List.init 100 (Z.pow a))
   |> List.map digit_sum
   |> max
   |> Z.to_int
+
+include (val Solution.make run)

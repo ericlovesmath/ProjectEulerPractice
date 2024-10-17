@@ -8,7 +8,7 @@ let eval_word word =
   |> List.fold ~init:0 ~f:( + )
 
 let scores =
-  In_channel.read_all "data/042_words.txt"
+  In_channel.read_all "data/042.txt"
   |> String.strip
   |> String.split_on_chars ~on:[ ',' ]
   |> List.map ~f:(fun w -> String.sub ~pos:1 ~len:(String.length w - 2) w)
@@ -24,4 +24,7 @@ let triangles =
   in
   triangles' 2 1 [ 1 ]
 
-let ans = List.length @@ List.filter ~f:(List.mem triangles ~equal:( = )) scores
+let run () =
+  List.length @@ List.filter ~f:(List.mem triangles ~equal:( = )) scores
+
+include (val Solution.make run)
