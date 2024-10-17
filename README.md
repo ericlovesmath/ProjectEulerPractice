@@ -1,3 +1,3 @@
-# ProjectEulerPractice
-Practice (Python 3) for Project Euler (https://projecteuler.net/about)
+# Project Euler Solutions
 
+Random [Project Euler](https://projecteuler.net/about) solutions in various languages

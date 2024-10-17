@@ -1,4 +1,0 @@
-(executable
- (public_name project_euler)
- (name main)
- (libraries project_euler core zarith))

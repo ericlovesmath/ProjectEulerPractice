@@ -1,0 +1,4 @@
+(lang dune 3.9)
+(name project_euler)
+(generate_opam_files true)
+(source (github ericlovesmath/ProjectEulerPractice))

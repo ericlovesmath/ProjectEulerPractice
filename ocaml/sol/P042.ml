@@ -25,4 +25,3 @@ let triangles =
   triangles' 2 1 [ 1 ]
 
 let ans = List.length @@ List.filter ~f:(List.mem triangles ~equal:( = )) scores
-
